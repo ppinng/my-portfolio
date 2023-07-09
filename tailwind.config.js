@@ -5,9 +5,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'monst': ['Montserrat', 'sans-serif'],
-        'quicksand': ['Quicksand', 'sans-serif'],
-      }
+        monst: ["Montserrat", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
+      },
+    },
+    colors: {
+      white: "#FAFAFA",
     },
   },
   plugins: [],

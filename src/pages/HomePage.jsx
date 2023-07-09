@@ -4,7 +4,7 @@ import "../App.css";
 
 export const HomePage = () => {
   return (
-    <div className="min-h-screen overflow-hidden ">
+    <div className="min-h-screen overflow-hidden bg-white">
       <div className="sm:grid grid-cols-3">
         <div className="max-lg:hidden"></div>
         <div className="max-md:pl-40 md:pl-11 lg:pl-72 sm:col-span-2 font-quicksand text-7xl max-sm:text-5xl pt-28 max-sm:pl-6 max-sm:pt-20">
