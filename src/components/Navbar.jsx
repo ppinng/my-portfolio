@@ -11,27 +11,17 @@ const Navbar = () => {
   };
 
   return (
-    // <div className="max-w-full border  flex items-center invisible lg:visible">
-    //   <div className="pl-1">
-    //     <img src={Logo} alt="Website logo"  />
-    //   </div>
-    //   <div>
-    //     <h1 className="font-Monsterrat text-2xl font-bold">Thiti.</h1>
-    //   </div>
-    //   <div>Home</div>
-    //   <div>About Me</div>
-    //   <div>Projects</div>
-    //   <div>Contact</div>
-    // </div>
     <nav className=" max-w-full max-sm:px-7 px-60px py-2 mx-auto shadow-xl bg-white">
       <div className="flex justify-between items-center ">
         <div className="flex justify-between items-center ">
           <a href="/">
             <img src={Logo} alt="logo" width={70} height={100} />
           </a>
-          <div className="font-quicksand text-2xl font-bold pt-3 pl-2">Thiti.</div>
+          <div className="font-quicksand text-2xl font-bold pt-3 pl-2">
+            Thiti.
+          </div>
         </div>
-        <div className="hidden sm:flex">
+        <div className="pt-12px hidden sm:flex">
           <ul className="hidden sm:flex gap-2">
             <li className="mr-8">
               <a
@@ -43,15 +33,23 @@ const Navbar = () => {
             </li>
             <li className="mr-8">
               <a
-                href="/"
+                href="/about"
                 className="font-quicksand text-xl hover:border-b-4 hover:border-blue-300"
               >
-                About
+                About me
               </a>
             </li>
             <li className="mr-8">
               <a
-                href="/"
+                href="/projects"
+                className="font-quicksand text-xl hover:border-b-4 hover:border-blue-400"
+              >
+                My Projects
+              </a>
+            </li>
+            <li className="mr-8">
+              <a
+                href="/contact"
                 className="font-quicksand text-xl hover:border-b-4 hover:border-blue-400"
               >
                 Contact
@@ -111,4 +109,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

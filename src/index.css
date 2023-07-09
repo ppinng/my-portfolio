@@ -12,4 +12,25 @@
         padding-left: 60px;
         padding-right: 60px;
     }
+    .pt-12px{
+        padding-top: 12px;
+    }
+    .bg-whitebg {
+        --tw-bg-opacity: 1;
+        background-color: rgb(234 234 234 / var(--tw-bg-opacity));
+    }
+
+    .text-greytext {
+        --tw-text-opacity: 1;
+        color: rgb(82 82 82 / var(--tw-text-opacity));
+    }
+
+    .border-bluebox {
+        --tw-border-opacity: 1;
+        border-color: rgb(15 82 186 / var(--tw-border-opacity));
+    }
+
+    .mt-34px {
+        margin-top: 34px;
+    }
 }
