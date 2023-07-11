@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Logo from "../assets/Web_Logo.png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export default function Navbar() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -11,49 +12,49 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" max-w-full max-sm:px-7 px-60px py-2 mx-auto shadow-xl bg-white">
+    <nav className=" max-w-full max-sm:px-7 px-60px py-2 mx-auto shadow-xl bg-whitebg ">
       <div className="flex justify-between items-center ">
         <div className="flex justify-between items-center ">
-          <a href="/">
+          <Link to="/">
             <img src={Logo} alt="logo" width={70} height={100} />
-          </a>
+          </Link>
           <div className="font-quicksand text-2xl font-bold pt-3 pl-2">
             Thiti.
           </div>
         </div>
         <div className="pt-12px hidden sm:flex">
-          <ul className="hidden sm:flex gap-2">
+          <ul className="hidden sm:flex gap-2 ">
             <li className="mr-8">
-              <a
-                href="/"
-                className="font-quicksand text-xl hover:border-b-4 hover:border-blue-300"
+              <Link
+                to="/"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="mr-8">
-              <a
-                href="/about"
-                className="font-quicksand text-xl hover:border-b-4 hover:border-blue-300"
+              <Link
+                to="/aboutme"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300"
               >
                 About me
-              </a>
+              </Link>
             </li>
             <li className="mr-8">
-              <a
-                href="/projects"
-                className="font-quicksand text-xl hover:border-b-4 hover:border-blue-400"
+              <Link
+                to="/my-projects"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400"
               >
                 My Projects
-              </a>
+              </Link>
             </li>
             <li className="mr-8">
-              <a
-                href="/contact"
-                className="font-quicksand text-xl hover:border-b-4 hover:border-blue-400"
+              <Link
+                to="/contact"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -85,16 +86,25 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="/"
+              href="/aboutme"
               onClick={() => setNav(false)}
               className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
             >
-              About
+              About me
             </a>
           </li>
           <li>
             <a
-              href="/"
+              href="/my-projects"
+              onClick={() => setNav(false)}
+              className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
+            >
+              My Projects
+            </a>
+          </li>        
+          <li>
+            <a
+              href="/contact"
               onClick={() => setNav(false)}
               className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
             >
@@ -106,6 +116,4 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

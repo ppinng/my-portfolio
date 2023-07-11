@@ -1,8 +1,9 @@
 import React from "react";
 import WebImg from "../assets/Saly-10.png";
 import "../App.css";
+import { Link } from "react-router-dom";
 
-export const HomePage = () => {
+export default function HomePage() {
   return (
     <div className="min-h-screen overflow-hidden bg-white">
       <div className="sm:grid grid-cols-3">
@@ -14,7 +15,7 @@ export const HomePage = () => {
             Welcome to my portfolio!
           </div>
           <button className="text-xl rounded-[14px] border-4 border-bluebox px-4 py-4 max-sm:mt-5 sm:mt-34px">
-            About me
+            <Link to="/aboutme">About me</Link>
           </button>
         </div>
         <div className="max-sm:hidden absolute bottom-0 w-fit">
@@ -26,4 +27,4 @@ export const HomePage = () => {
       </div>
     </div>
   );
-};
+}
