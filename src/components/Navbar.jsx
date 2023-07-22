@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className=" max-w-full max-sm:px-7 px-60px py-2 mx-auto shadow-xl bg-whitebg ">
+    <nav className="max-sm:px-7 px-60px py-2 mx-auto bg-whitebg">
       <div className="flex justify-between items-center ">
         <div className="flex justify-between items-center ">
           <Link to="/">
@@ -27,7 +27,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300 md:text-xl"
               >
                 Home
               </Link>
@@ -35,7 +35,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/aboutme"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300 md:text-xl"
               >
                 About me
               </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/my-projects"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400 md:text-xl"
               >
                 My Projects
               </Link>
@@ -51,7 +51,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/contact"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400 md:text-xl"
               >
                 Contact
               </Link>
@@ -65,8 +65,8 @@ export default function Navbar() {
       <div
         className={
           nav
-            ? "fixed right-0 top-0 w-48 sm:hidden h-screen bg-white p-10 ease-in-out duration-500 shadow-lg"
-            : "fixed right-[-100%] top-0 w-48 sm:hidden h-screen bg-white p-10 ease-in-out duration-500 shadow-lg"
+            ? "fixed right-0 top-0 w-48 sm:hidden h-screen bg-whitebg p-10 ease-in-out duration-500 shadow-lg"
+            : "fixed right-[-100%] top-0 w-48 sm:hidden h-screen bg-whitebg p-10 ease-in-out duration-500 shadow-lg"
         }
       >
         <div className="flex w-full items-center justify-end ml-3 mb-4">
