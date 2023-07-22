@@ -76,40 +76,40 @@ export default function Navbar() {
         </div>
         <ul className="flex flex-col gap-9 mt-10 ">
           <li>
-            <a
-              href="/"
+            <Link
+              to="/"
               onClick={() => setNav(false)}
               className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/aboutme"
+            <Link
+              to="/aboutme"
               onClick={() => setNav(false)}
               className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
             >
               About me
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/my-projects"
+            <Link
+              to="/my-projects"
               onClick={() => setNav(false)}
               className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
             >
               My Projects
-            </a>
-          </li>        
+            </Link>
+          </li>
           <li>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               onClick={() => setNav(false)}
               className="font-quicksand text-xl hover:border-b-4 hover:border-red-300"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         <img src={Logo} alt="logo" className="h-24 w-24 mt-10" />
