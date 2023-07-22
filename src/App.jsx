@@ -4,8 +4,9 @@ import Aboutme from "./pages/Aboutme";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
+  
   return (
-    <div className="App">
+    <div>
       <Navbar />
       <div>
         <Routes>
