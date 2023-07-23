@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="min-h-screen sm:grid grid-cols-3 bg-white">
         <div className="max-lg:hidden"></div>
         <div className="max-md:pl-40 md:pl-11 lg:pl-72 sm:col-span-2 font-quicksand text-7xl max-sm:text-5xl pt-44 max-sm:pl-6 max-sm:pt-32">
-          Hi! I’m Thiti
+          Hi! I’m Thiti Test
           <br />
           <div className="text-3xl text-greytext max-sm:text-2xl pt-2 pl-1">
             Welcome to my portfolio!
