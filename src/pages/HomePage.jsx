@@ -12,7 +12,7 @@ export default function HomePage() {
           Hi! I’m Thiti
           <br />
           <div className="text-3xl text-greytext max-sm:text-2xl pt-2 pl-1">
-            Welcome to my portfolio!
+            Welcome to my portfolio! ee
           </div>
           <button className="cursor-pointer text-xl rounded-[14px] border-4 border-bluebox px-4 py-4 max-sm:mt-5 sm:mt-34px">
             <Link to="/aboutme">About me</Link>
