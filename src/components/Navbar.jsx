@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Logo} from "../assets/Web_logo.png";
+import Logo from "../assets/Web_logo.png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
