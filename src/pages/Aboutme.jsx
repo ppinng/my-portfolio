@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Grid } from "@mui/material";
 import Profile from "../assets/Profile_image.jpg";
 export default function Aboutme() {
   useEffect(() => {
@@ -23,7 +22,7 @@ export default function Aboutme() {
             <div className="tracking-wide lg:text-7xl font-bold  md:text-5xl max-sm:text-4xl text-orange max-sm:pt-4">
               Thiti Sae-lee
             </div>
-            <p className="mt-3 lg:ml-3 lg:text-justify mx-1 md:text-xl md:w-12/12 lg:w-3/5">
+            <p className="mt-3 lg:ml-3 text-base  mx-1 md:text-xl md:w-12/12 lg:w-3/5">
               I am studying as an undergraduate in student in the
               Computer-science program at King Mongkut's University of
               Technology Thonburi (KMUTT). I have completed several projects

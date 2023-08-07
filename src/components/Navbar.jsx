@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-screen max-sm:px-7 px-60px py-2 mx-auto bg-whitebg">
+    <nav className="fixed w-screen max-sm:px-7 px-60px py-2 mx-auto bg-whitebg z-20">
       <div className="flex justify-between items-center ">
         <div className="flex justify-between items-center ">
           <Link to="/">

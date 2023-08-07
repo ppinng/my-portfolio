@@ -24,7 +24,7 @@ export default function HomePage() {
         <div className="max-sm:hidden absolute bottom-0 w-fit">
           <img src={WebImg} alt="Web Image" width={680} />
         </div>
-        <div className="sm:hidden absolute bottom-0 ">
+        <div className="sm:hidden absolute bottom-0 z-30">
           <img src={WebImg} alt="Web Image" />
         </div>
       </div>
