@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import {useEffect} from "react";
 import WebImg from "../assets/Saly-10.png";
 import { Link } from "react-router-dom";
 

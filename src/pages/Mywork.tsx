@@ -1,8 +1,6 @@
-import React from "react";
 import { useEffect } from "react";
 import { projects } from "../shared/Projects";
-import "boxicons";
-import techChips from "../components/techChips";
+import TechChips from "../components/Techchips";
 
 export default function Myworks() {
   useEffect(() => {
@@ -21,7 +19,7 @@ export default function Myworks() {
               >
                 <div className="flex flex-col">
                   <div className="rounded-2xl flex justify-center">
-                    <img src={el.img} alt={el.title} />
+                    <img className="h-[200px] w-auto" src={el.img} alt={el.title} />
                   </div>
                   <div className="title-container pt-3">
                     {/* Title container with normal flex positioning */}
@@ -29,20 +27,9 @@ export default function Myworks() {
                       {el.title}
                     </div>
                     <div className="bottom-0 left-0 pt-3">
-                      {techChips({ stacks: el.techstack, isExample: false })}{" "}
-                      {/* Change isExample to false */}
+                      {TechChips({ tools: el.techstack })}
                     </div>
                   </div>
-                </div>
-                <div className="x-container absolute bottom-0 right-0 pb-5 pr-7 flex flex-row">
-                  {/* Container specifically for the "X" element */}
-                  <box-icon
-                    name="chevron-right"
-                    type="solid"
-                    size="lg"
-                    border="circle"
-                    animation="fade-right-hover"
-                  />
                 </div>
               </div>
             );

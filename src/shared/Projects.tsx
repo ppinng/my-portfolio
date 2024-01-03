@@ -72,7 +72,7 @@ export const projects = [
     date: 2023,
     techstack: ["React", "Vite", "Tailwind CSS", "Figma", "Boxicons"],
     responsibilities: ["Design", "Development"],
-    img: "/projects-imgs/test.png",
+    img: "/projects-imgs/portfolio.png",
     alt: "My Portfolio",
     src: "https://github.com/ppinng/my-portfolio",
   },

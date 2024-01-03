@@ -1,21 +1,17 @@
+import { useTheme } from "@mui/material/styles";
 import { useState, useEffect, useRef } from "react";
 
-const techChips = ({ stacks, isExample }) => {
-  const containerRef = useRef(null);
-  const [toolsToDisplay, setToolsToDisplay] = useState([]);
+const ToolComponent = ({ tools }: any) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [toolsToDisplay, setToolsToDisplay] = useState<string[]>([]);
   const [isOverflowing, setIsOverflowing] = useState(false);
 
+  const theme = useTheme();
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
-        const container = containerRef.current;
-        const containerWidth = container.offsetWidth;
-        const toolMinWidth = 70; // Minimum width of each tool (adjust as needed)
-        const maxTools = Math.floor((containerWidth - toolMinWidth) / toolMinWidth);
-
-        // Limit displayed tools to 3 if the array is longer than 4 or equal to 4
-        const displayedTools = stacks.length <= 4 ? stacks : stacks.slice(0, 3);
-        const isOverflowing = stacks.length > 4;
+        const displayedTools = tools.length <= 4 ? tools : tools.slice(0, 3);
+        const isOverflowing = tools.length > 4;
 
         setToolsToDisplay(displayedTools);
         setIsOverflowing(isOverflowing);
@@ -28,10 +24,13 @@ const techChips = ({ stacks, isExample }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [stacks]);
-  
+  }, [tools]);
+
   return (
-    <div ref={containerRef} className="text-black dark:text-white flex flex-wrap gap-2 my-2">
+    <div
+      ref={containerRef}
+      className="text-black dark:text-white flex flex-wrap gap-2 my-2"
+    >
       {toolsToDisplay.map((tool, index) => (
         <span
           key={index}
@@ -49,4 +48,4 @@ const techChips = ({ stacks, isExample }) => {
   );
 };
 
-export default techChips;
+export default ToolComponent;

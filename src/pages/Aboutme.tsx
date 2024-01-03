@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Profile from "../assets/Profile_image.jpg";
 export default function Aboutme() {
   useEffect(() => {
