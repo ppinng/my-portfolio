@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { projects } from "../shared/Projects";
 import TechChips from "../components/Techchips";
 
