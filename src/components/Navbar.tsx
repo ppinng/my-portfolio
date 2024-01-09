@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-screen max-sm:px-7 px-60px py-2 mx-auto bg-whitebg z-20">
+    <nav className="fixed w-full max-sm:px-7 px-60px py-2 mx-auto bg-whitebg z-20">
       <div className="flex justify-between items-center ">
         <div className="flex justify-between items-center ">
           <Link to="/">
@@ -27,7 +27,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300 md:text-xl"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-bluebox md:text-xl"
               >
                 Home
               </Link>
@@ -35,7 +35,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/aboutme"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-300 md:text-xl"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-bluebox md:text-xl"
               >
                 About me
               </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/my-projects"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400 md:text-xl"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-bluebox md:text-xl"
               >
                 My Projects
               </Link>
@@ -51,7 +51,7 @@ export default function Navbar() {
             <li className="mr-8">
               <Link
                 to="/contact"
-                className="font-quicksand text-2xl hover:border-b-4 hover:border-blue-400 md:text-xl"
+                className="font-quicksand text-2xl hover:border-b-4 hover:border-bluebox md:text-xl"
               >
                 Contact
               </Link>

@@ -1,4 +1,3 @@
-import { useTheme } from "@mui/material/styles";
 import { useState, useEffect, useRef } from "react";
 
 const ToolComponent = ({ tools }: any) => {
@@ -6,7 +5,6 @@ const ToolComponent = ({ tools }: any) => {
   const [toolsToDisplay, setToolsToDisplay] = useState<string[]>([]);
   const [isOverflowing, setIsOverflowing] = useState(false);
 
-  const theme = useTheme();
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
@@ -34,13 +32,13 @@ const ToolComponent = ({ tools }: any) => {
       {toolsToDisplay.map((tool, index) => (
         <span
           key={index}
-          className="inline-block border-2 border-zinc-300 dark:border-zinc-600 rounded-full font-thin px-2 py-1 text-xs"
+          className="inline-block border-2 border-customorange  rounded-full font-thin px-2 py-1 text-xs"
         >
           {tool}
         </span>
       ))}
       {isOverflowing && (
-        <span className="inline-block border-2 border-zinc-300 dark:border-zinc-600 rounded-full px-2 py-1 text-xs">
+        <span className="inline-block border-2 bg-customorange border-customorange  rounded-full font-thin px-4 py-1 text-xs">
           . . .
         </span>
       )}
