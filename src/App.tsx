@@ -3,9 +3,9 @@ import HomePage from "./pages/HomePage";
 import Aboutme from "./pages/Aboutme";
 import Myworks from "./pages/Mywork";
 import { Routes, Route } from "react-router-dom";
-
+import ReactGA from 'react-ga4';
 function App() {
-  
+  ReactGA.initialize('G-GXV1GE9L4B');
   return (
     <div>
       <Navbar />

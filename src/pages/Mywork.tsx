@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import { projects } from "../shared/Projects";
 import TechChips from "../components/Techchips";
-
+import ReactGA from "react-ga4";
 export default function Myworks() {
   useEffect(() => {
     document.title = "My Projects";
   }, []);
 
+  ReactGA.send({
+    hitType: "pageview",
+    page: window.location.pathname,
+    title: "My Projects",
+  });
   return (
     <div className="min-h-screen max-sm:pt-28 pt-28 bg-white ">
       <div className="container mx-auto ">
