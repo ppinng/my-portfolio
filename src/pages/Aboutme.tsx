@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 import Profile from "../assets/Profile_image.jpg";
-import ReactGA from 'react-ga4';
+import ReactGA from "react-ga4";
 
 export default function Aboutme() {
   useEffect(() => {
     document.title = "About me";
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "About me",
+    });
   }, []);
 
-  ReactGA.send({
-    hitType: "pageview",
-    page: window.location.pathname,
-    title: "About me",
-  });
   return (
     <div className="min-h-screen pt-16 max-md:pt-2 bg-white p-8">
       <div className="container mx-auto ">

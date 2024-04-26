@@ -1,17 +1,28 @@
 import { useEffect } from "react";
 import WebImg from "../assets/Saly-10.png";
-import { Link } from "react-router-dom";
 import ReactGA from "react-ga4";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   useEffect(() => {
     document.title = "Thiti";
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
+      title: "Home",
+    });
   }, []);
-  ReactGA.send({
-    hitType: "pageview",
-    page: window.location.pathname,
-    title: "Home",
-  });
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/aboutme");
+    ReactGA.event({
+      category: "Button",
+      action: "Click",
+      label: "About me",
+    });
+  };
+
   return (
     <div className="min-h-screen sm:grid grid-cols-3 bg-white">
       <div className="max-lg:hidden"></div>
@@ -21,8 +32,8 @@ export default function HomePage() {
         <div className="text-3xl text-greytext max-sm:text-2xl pt-2 pl-1">
           Welcome to my portfolio!
         </div>
-        <button className="cursor-pointer text-xl rounded-[14px] border-4 border-bluebox px-4 py-4 max-sm:mt-5 sm:mt-34px">
-          <Link to="/aboutme">About me</Link>
+        <button className="cursor-pointer text-xl rounded-[14px] border-4 border-bluebox px-4 py-4 max-sm:mt-5 sm:mt-34px" onClick={handleClick}>
+          <p>About me</p>
         </button>
       </div>
       <div className="max-sm:hidden absolute bottom-0 w-fit">
