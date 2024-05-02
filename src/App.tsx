@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/my-portfolio">
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
