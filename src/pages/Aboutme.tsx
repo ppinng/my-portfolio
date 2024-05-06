@@ -18,23 +18,21 @@ export default function Aboutme() {
         <div className="md:flex md:flex-row pt-28">
           <div className="md:shrink-0 flex justify-center">
             <img
-              src={Profile}
-              alt="Profile picture"
-              className="rounded-2xl object-cover  lg:ml-1 md:ml-8 max-md:w-56"
-              height={250}
-              width={290}
+                src={Profile}
+                alt="Profile picture"
+                className="rounded-2xl object-cover  lg:ml-1 md:ml-8 max-md:w-56"
+                height={250}
+                width={290}
             />
           </div>
           <div className="lg:ml-36 md:pl-10 font-quicksand">
-            <div className="tracking-wide lg:text-7xl font-bold  md:text-5xl max-sm:text-4xl text-orange max-sm:pt-4">
-              Thiti Sae-lee
-            </div>
-            <p className="mt-3 lg:ml-3 text-base  mx-1 md:text-xl md:w-12/12 lg:w-3/5">
-              I am studying as an undergraduate in student in the
-              Computer-science program at King Mongkut's University of
-              Technology Thonburi (KMUTT). I have completed several projects
-              such as web applications, mobile applications. I used to work on
-              both frontend and backend.
+            <h1 className="tracking-wide lg:text-7xl font-bold md:text-5xl max-sm:text-4xl text-orange max-sm:pt-4">
+              Thiti Sae-lee (Ping)
+            </h1>
+            <p className="mt-3 lg:ml-3 text-base mx-1 md:text-xl md:w-12/12 lg:w-3/5">
+              I am studying as an undergraduate in the Computer Science program at King Mongkut's University of
+              Technology Thonburi (KMUTT). I have completed several projects including web applications and mobile
+              applications, and I am experienced in both frontend and backend development.
             </p>
           </div>
         </div>
@@ -47,14 +45,14 @@ export default function Aboutme() {
             2017 - 2020
           </div>
           <div className="md:hidden">
-            Debsirin School <br /> GPAX: ??
+            Debsirin School <br/> GPAX: ??
           </div>
           <div className="md:text-2xl max-md:text-xl  text-orange lg:pt-4 max-lg:pt-2">
             2021 - Present
           </div>
           <div className="md:hidden ">
             King Mongkut's University of Technology Thonburi <br /> Bachelor's
-            degree, Computer Science
+            degree, Computer Science <br /> GPAX: 3.14
           </div>
         </div>
         {/* For Desktop resolutin */}
@@ -65,7 +63,7 @@ export default function Aboutme() {
           </div>
           <div className="md:text-lg">
             King Mongkut's University of Technology Thonburi <br /> Bachelor's
-            degree, Computer Science
+            degree, Computer Science <br /> GPAX: 3.14
           </div>
         </div>
         {/* Techs&Tools */}

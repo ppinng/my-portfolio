@@ -1,7 +1,8 @@
 import Navbar from "../src/components/Navbar";
 import HomePage from "./pages/HomePage";
-import Aboutme from "./pages/Aboutme";
-import Myworks from "./pages/Mywork";
+import AboutMe from "./pages/Aboutme";
+import MyWorks from "./pages/Mywork";
+import NotFound from "./shared/NotFound";
 import { HashRouter , Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
@@ -16,8 +17,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/aboutme" element={<Aboutme />} />
-        <Route path="/my-projects" element={<Myworks />} />
+        <Route path="/aboutme" element={<AboutMe />} />
+        <Route path="/my-projects" element={<MyWorks />} />
+          <Route element={<NotFound/>} />
       </Routes>
     </HashRouter >
   );
