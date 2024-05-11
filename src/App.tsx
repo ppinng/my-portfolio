@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import AboutMe from "./pages/Aboutme";
 import MyWorks from "./pages/Mywork";
 import NotFound from "./shared/NotFound";
-import { HashRouter , Routes, Route } from "react-router-dom";
+import { BrowserRouter , Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 function App() {
@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <HashRouter >
+    <BrowserRouter >
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/my-projects" element={<MyWorks />} />
           <Route element={<NotFound/>} />
       </Routes>
-    </HashRouter >
+    </BrowserRouter >
   );
 }
 
