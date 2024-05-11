@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import WebImg from "../assets/Saly-10.png";
 import ReactGA from "react-ga4";
 import { useNavigate } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 export default function HomePage() {
   useEffect(() => {
@@ -23,8 +24,31 @@ export default function HomePage() {
     });
   };
 
+    const homeSchema  = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.ppinng.me/"
+            }
+        ],
+
+    };
+
   return (
     <div className="min-h-screen sm:grid grid-cols-3 bg-white">
+        <Helmet>
+            <meta charSet="utf-8"/>
+            <title>ppinng - Thiti's portfolio</title>
+            <meta name="description"
+                  content="Welcome to ppinng's portfolio! Explore a showcase of my journey in computer science and software development on ppinng.me."/>
+            <script type="application/ld+json">
+                {JSON.stringify(homeSchema)}
+            </script>
+        </Helmet>
       <div className="max-lg:hidden"></div>
       <div className="max-md:pl-40 md:pl-11 lg:pl-72 sm:col-span-2 font-quicksand text-7xl max-sm:text-5xl pt-44 max-sm:pl-6 max-sm:pt-32">
         <h1>Hi! I’m Thiti (Ping)</h1>

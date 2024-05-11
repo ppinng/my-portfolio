@@ -6,6 +6,7 @@ import NotFound from "./shared/NotFound";
 import { BrowserRouter , Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
+
 function App() {
   useEffect(() => {
     ReactGA.initialize("G-GXV1GE9L4B");

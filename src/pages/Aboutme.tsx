@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Profile from "../assets/Profile_image.jpg";
 import ReactGA from "react-ga4";
+import {Helmet} from "react-helmet";
 
 export default function Aboutme() {
   useEffect(() => {
@@ -11,9 +12,35 @@ export default function Aboutme() {
       title: "About me",
     });
   }, []);
+  const aboutmeSchema  = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ppinng.me/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About me",
+        "item": "https://www.ppinng.me/aboutme"
+      }
+    ],
 
+  };
   return (
     <div className="min-h-screen pt-16 max-md:pt-2 bg-white p-8">
+      <Helmet>
+        <title>About me | Thiti Sae-lee | ppinng</title>
+        <meta name="description"
+              content="Get to know Thiti Sae-lee (Ping) and his journey in computer science and software development. Discover Thiti's background, skills, and experiences on ppinng.me."/>
+        <script type="application/ld+json">
+          {JSON.stringify(aboutmeSchema)}
+        </script>
+      </Helmet>
       <div className="container mx-auto ">
         <div className="md:flex md:flex-row pt-28">
           <div className="md:shrink-0 flex justify-center">
