@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   useEffect(() => {
+      document.title = "Home";
     ReactGA.send({
       hitType: "pageview",
       page: window.location.pathname,
