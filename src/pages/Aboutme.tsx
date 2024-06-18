@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Profile from "../assets/Profile_image.jpg";
 import ReactGA from "react-ga4";
-import {Helmet} from "react-helmet-async";
+import {Helmet} from "react-helmet";
 
 export default function Aboutme() {
   useEffect(() => {
