@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { projects } from "../shared/Projects";
 import TechChips from "../components/Techchips";
 import ReactGA from "react-ga4";
-import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet-async";
+
 export default function Myworks() {
   useEffect(() => {
     document.title = "My Projects";
@@ -33,7 +34,7 @@ export default function Myworks() {
   };
   return (
     <div className="min-h-screen max-sm:pt-28 pt-28 bg-white ">
-      <Helmet>
+      <Helmet prioritizeSeoTags>
         <meta charSet="utf-8"/>
         <title>Projects | Explore Thiti's Work | ppinng</title>
         <meta name="description"

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Profile from "../assets/Profile_image.jpg";
 import ReactGA from "react-ga4";
-import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet-async";
 
 export default function Aboutme() {
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Aboutme() {
   };
   return (
     <div className="min-h-screen pt-16 max-md:pt-2 bg-white p-8">
-      <Helmet>
+      <Helmet prioritizeSeoTags>
         <title>About me | Thiti Sae-lee | ppinng</title>
         <meta name="description"
               content="Get to know Thiti Sae-lee (Ping) and his journey in computer science and software development. Discover Thiti's background, skills, and experiences on ppinng.me."/>
