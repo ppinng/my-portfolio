@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import WebImg from "../assets/Saly-10.png";
 import ReactGA from "react-ga4";
 import { useNavigate } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet-async";
 
 export default function HomePage() {
   useEffect(() => {

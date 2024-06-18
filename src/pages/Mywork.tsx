@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { projects } from "../shared/Projects";
 import TechChips from "../components/Techchips";
 import ReactGA from "react-ga4";
-import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet-async";
 
 export default function Myworks() {
   useEffect(() => {
