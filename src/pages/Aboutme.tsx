@@ -33,7 +33,7 @@ export default function Aboutme() {
   };
   return (
     <div className="min-h-screen pt-16 max-md:pt-2 bg-white p-8">
-      <Helmet prioritizeSeoTags>
+      <Helmet>
         <title>About me | Thiti Sae-lee | ppinng</title>
         <meta name="description"
               content="Get to know Thiti Sae-lee (Ping) and his journey in computer science and software development. Discover Thiti's background, skills, and experiences on ppinng.me."/>

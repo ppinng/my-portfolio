@@ -40,7 +40,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen sm:grid grid-cols-3 bg-white">
-        <Helmet prioritizeSeoTags>
+        <Helmet>
             <meta charSet="utf-8"/>
             <title>ppinng - Thiti's portfolio</title>
             <meta name="description"

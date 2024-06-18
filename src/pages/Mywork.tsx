@@ -34,7 +34,7 @@ export default function Myworks() {
   };
   return (
     <div className="min-h-screen max-sm:pt-28 pt-28 bg-white ">
-      <Helmet prioritizeSeoTags>
+      <Helmet>
         <meta charSet="utf-8"/>
         <title>Projects | Explore Thiti's Work | ppinng</title>
         <meta name="description"
