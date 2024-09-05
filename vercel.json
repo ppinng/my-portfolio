@@ -6,7 +6,7 @@
       "use": "@vercel/go"
     },
     {
-      "src": "src/**/*",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
@@ -14,14 +14,13 @@
     }
   ],
   "routes": [
-    { "src": "/[^.]+", "dest": "/", "status": 200 },
     {
       "src": "/api/(.*)",
-      "dest": "/api/main.go"
+      "dest": "/api/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/dist/$1"
     }
   ]
 }
