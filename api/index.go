@@ -17,9 +17,7 @@ func init() {
 	}
 }
 
-// LoadTemplate reads the index.html file and stores it in the global indexHTMLTemplate variable
 func LoadTemplate() error {
-	// Read the index.html file from the dist folder
 	indexHTMLBytes, err := os.ReadFile("dist/index.html")
 	if err != nil {
 		return fmt.Errorf("error reading index.html: %s", err.Error())
@@ -28,10 +26,10 @@ func LoadTemplate() error {
 	return nil
 }
 
-// Handler function for all requests
 func Main(w http.ResponseWriter, r *http.Request) {
 	var title, description string
 
+	// Handle routing within the Go function
 	switch r.URL.Path {
 	case "/":
 		title = "ppinng - Thiti's portfolio"
@@ -47,7 +45,6 @@ func Main(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Define HTML meta tags
 	metaTags := fmt.Sprintf(`
 		<title>%s</title>
 		<meta name="description" content="%s">`, title, description)
@@ -55,7 +52,6 @@ func Main(w http.ResponseWriter, r *http.Request) {
 	// Inject the meta tags into the indexHTMLTemplate
 	renderedHTML := strings.Replace(indexHTMLTemplate, "<head>", "<head>"+metaTags, 1)
 
-	// Write the modified HTML to the response
 	w.Header().Set("Content-Type", "text/html")
 	_, _ = w.Write([]byte(renderedHTML))
 }
